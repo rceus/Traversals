@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "CustomButton.h"
+#import "CustomView.h"
 
 @interface DetailViewController ()
 
@@ -17,6 +19,7 @@
 }
 
 #pragma mark - Managing the detail item
+
 
 - (void)setDetailItem:(NSString*)newDetailItem {
     if (_detailItem != newDetailItem) {
@@ -30,6 +33,12 @@
     // Update the user interface for the detail item.
     [self setLabels];
     stepperCurrentValue = _stepperObject.value;
+    if ([_detailItem containsString:@"Traversal"]) {
+        [self createTree];
+    } else {
+        [self createGraph];
+    }
+    
 }
 
 - (void)setLabels{
@@ -57,6 +66,7 @@
         //Plus Button Pressed
         NSLog(@"Positive State");
         stepperCurrentValue++;
+        [self fetchNext];
         
     } else if (_stepperObject.value < stepperCurrentValue){
         //Minus Button Pressed
@@ -70,16 +80,108 @@
 }
 
 - (void)fetchNext{
-    
 }
 
 - (void)createTree {
     NSLog(@"Reached a Tree Method");
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+
+    CustomView *view = [[CustomView alloc] initWithFrame:self.view.bounds];
+    view.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:view];
+    [view changeLinePositionOneX:(screenBounds.size.width/2) positionOneY:100 positionTwoX:(screenBounds.size.width/4, 160) positionTwoY:160];
+
+    _button1 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button1 setTitle:@" 1 " forState:UIControlStateNormal];
+    [_button1 sizeToFit];
+    _button1.center = CGPointMake(screenBounds.size.width/2, 100);
+    [self.view addSubview:_button1];
+    
+    _button2 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button2 setTitle:@" 2 " forState:UIControlStateNormal];
+    [_button2 sizeToFit];
+    _button2.center = CGPointMake(screenBounds.size.width/4, 160);
+    [self.view addSubview:_button2];
+    
+    
+    _button3 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button3 setTitle:@" 3 " forState:UIControlStateNormal];
+    [_button3 sizeToFit];
+    _button3.center = CGPointMake((screenBounds.size.width * 3)/4, 160);
+    [self.view addSubview:_button3];
+    
+    _button4 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button4 setTitle:@" 4 " forState:UIControlStateNormal];
+    [_button4 sizeToFit];
+    _button4.center = CGPointMake((screenBounds.size.width)/8, 240);
+    [self.view addSubview:_button4];
+    
+    _button5 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button5 setTitle:@" 5 " forState:UIControlStateNormal];
+    [_button5 sizeToFit];
+    _button5.center = CGPointMake((screenBounds.size.width * 3 )/8, 240);
+    [self.view addSubview:_button5];
+    
+    _button6 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button6 setTitle:@" 6 " forState:UIControlStateNormal];
+    [_button6 sizeToFit];
+    _button6.center = CGPointMake((screenBounds.size.width * 5)/8, 240);
+    [self.view addSubview:_button6];
+    
+    _button7 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button7 setTitle:@" 7 " forState:UIControlStateNormal];
+    [_button7 sizeToFit];
+    _button7.center = CGPointMake((screenBounds.size.width * 7)/8, 240);
+    [self.view addSubview:_button7];
 }
 
 - (void)createGraph {
     NSLog(@"Reached a Graph Method");
+    _button1 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button1 setTitle:@" 1 " forState:UIControlStateNormal];
+    [_button1 sizeToFit];
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    _button1.center = CGPointMake(screenBounds.size.width/2, 100);
+    [self.view addSubview:_button1];
+    
+    _button2 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button2 setTitle:@" 2 " forState:UIControlStateNormal];
+    [_button2 sizeToFit];
+    _button2.center = CGPointMake(screenBounds.size.width/4, 160);
+    [self.view addSubview:_button2];
+    
+    _button3 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button3 setTitle:@" 3 " forState:UIControlStateNormal];
+    [_button3 sizeToFit];
+    _button3.center = CGPointMake((screenBounds.size.width * 3)/4, 160);
+    [self.view addSubview:_button3];
+    
+    _button4 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button4 setTitle:@" 4 " forState:UIControlStateNormal];
+    [_button4 sizeToFit];
+    _button4.center = CGPointMake((screenBounds.size.width)/4, 240);
+    [self.view addSubview:_button4];
+    
+    _button5 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button5 setTitle:@" 5 " forState:UIControlStateNormal];
+    [_button5 sizeToFit];
+    _button5.center = CGPointMake((screenBounds.size.width * 3 )/4, 240);
+    [self.view addSubview:_button5];
+    
+    _button6 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button6 setTitle:@" 6 " forState:UIControlStateNormal];
+    [_button6 sizeToFit];
+    _button6.center = CGPointMake((screenBounds.size.width )/4, 320);
+    [self.view addSubview:_button6];
+    
+    _button7 = [CustomButton buttonWithType:UIButtonTypeSystem];
+    [_button7 setTitle:@" 7 " forState:UIControlStateNormal];
+    [_button7 sizeToFit];
+    _button7.center = CGPointMake((screenBounds.size.width * 3)/4, 320);
+    [self.view addSubview:_button7];
+
 }
+
 
 - (NSString*)getLabelDescription:(NSString*)type{
     NSLog(@"Getting Label Description for %@", type);

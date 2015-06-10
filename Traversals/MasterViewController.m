@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "CustomButton.h"
 
 @interface MasterViewController ()
 
@@ -70,8 +71,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    //NSDate *object = self.objects[indexPath.row];
-    //cell.textLabel.text = [object description];
     NSLog(@"Creating Cell in Master View for: %@", [traversalOptions objectAtIndex:indexPath.row]);
     cell.textLabel.text = [traversalOptions objectAtIndex:indexPath.row];
     return cell;

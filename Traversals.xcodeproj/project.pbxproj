@@ -15,6 +15,10 @@
 		322C68511B28A2C600A0073F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322C68501B28A2C600A0073F /* Images.xcassets */; };
 		322C68541B28A2C600A0073F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C68521B28A2C600A0073F /* LaunchScreen.xib */; };
 		322C68601B28A2C600A0073F /* TraversalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C685F1B28A2C600A0073F /* TraversalsTests.m */; };
+		323727401B28E0BF00F397CD /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237273F1B28E0BF00F397CD /* CustomButton.m */; };
+		323727431B28EEA400F397CD /* DetailSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727421B28EEA400F397CD /* DetailSubView.m */; };
+		323727461B28EF1E00F397CD /* CustomEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727451B28EF1E00F397CD /* CustomEdge.m */; };
+		323727491B28F60D00F397CD /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727481B28F60D00F397CD /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,14 @@
 		322C68591B28A2C600A0073F /* TraversalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraversalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C685E1B28A2C600A0073F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322C685F1B28A2C600A0073F /* TraversalsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraversalsTests.m; sourceTree = "<group>"; };
+		3237273E1B28E0BF00F397CD /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		3237273F1B28E0BF00F397CD /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		323727411B28EEA400F397CD /* DetailSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailSubView.h; path = ../DetailSubView.h; sourceTree = "<group>"; };
+		323727421B28EEA400F397CD /* DetailSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailSubView.m; path = ../DetailSubView.m; sourceTree = "<group>"; };
+		323727441B28EF1E00F397CD /* CustomEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEdge.h; sourceTree = "<group>"; };
+		323727451B28EF1E00F397CD /* CustomEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEdge.m; sourceTree = "<group>"; };
+		323727471B28F60D00F397CD /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		323727481B28F60D00F397CD /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +96,20 @@
 		322C683F1B28A2C600A0073F /* Traversals */ = {
 			isa = PBXGroup;
 			children = (
+				323727411B28EEA400F397CD /* DetailSubView.h */,
+				323727421B28EEA400F397CD /* DetailSubView.m */,
 				322C68441B28A2C600A0073F /* AppDelegate.h */,
 				322C68451B28A2C600A0073F /* AppDelegate.m */,
 				322C68471B28A2C600A0073F /* MasterViewController.h */,
 				322C68481B28A2C600A0073F /* MasterViewController.m */,
 				322C684A1B28A2C600A0073F /* DetailViewController.h */,
 				322C684B1B28A2C600A0073F /* DetailViewController.m */,
+				3237273E1B28E0BF00F397CD /* CustomButton.h */,
+				3237273F1B28E0BF00F397CD /* CustomButton.m */,
+				323727441B28EF1E00F397CD /* CustomEdge.h */,
+				323727451B28EF1E00F397CD /* CustomEdge.m */,
+				323727471B28F60D00F397CD /* CustomView.h */,
+				323727481B28F60D00F397CD /* CustomView.m */,
 				322C684D1B28A2C600A0073F /* Main.storyboard */,
 				322C68501B28A2C600A0073F /* Images.xcassets */,
 				322C68521B28A2C600A0073F /* LaunchScreen.xib */,
@@ -224,10 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323727431B28EEA400F397CD /* DetailSubView.m in Sources */,
 				322C68461B28A2C600A0073F /* AppDelegate.m in Sources */,
+				323727401B28E0BF00F397CD /* CustomButton.m in Sources */,
 				322C68491B28A2C600A0073F /* MasterViewController.m in Sources */,
 				322C68431B28A2C600A0073F /* main.m in Sources */,
+				323727491B28F60D00F397CD /* CustomView.m in Sources */,
 				322C684C1B28A2C600A0073F /* DetailViewController.m in Sources */,
+				323727461B28EF1E00F397CD /* CustomEdge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +446,7 @@
 				322C68651B28A2C600A0073F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		322C68661B28A2C600A0073F /* Build configuration list for PBXNativeTarget "TraversalsTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +455,7 @@
 				322C68681B28A2C600A0073F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
