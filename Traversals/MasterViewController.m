@@ -51,7 +51,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSString *object = traversalOptions[indexPath.row];
+        NSLog(@"Sending %@ to Detail View Controller", object);
         [[segue destinationViewController] setDetailItem:object];
     }
 }

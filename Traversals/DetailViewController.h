@@ -10,9 +10,12 @@
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *answer;
+@property (strong, nonatomic) NSString* detailItem;
 @property (weak, nonatomic) IBOutlet UIStepper *transitionController;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
+@property (weak, nonatomic) IBOutlet UILabel *answer;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperObject;
 
 @end
 
