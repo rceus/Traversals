@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3225CEC11B2A0A6E0070B760 /* CursorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3225CEC01B2A0A6E0070B760 /* CursorButton.m */; };
 		322C68431B28A2C600A0073F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C68421B28A2C600A0073F /* main.m */; };
 		322C68461B28A2C600A0073F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C68451B28A2C600A0073F /* AppDelegate.m */; };
 		322C68491B28A2C600A0073F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C68481B28A2C600A0073F /* MasterViewController.m */; };
@@ -16,9 +17,9 @@
 		322C68541B28A2C600A0073F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C68521B28A2C600A0073F /* LaunchScreen.xib */; };
 		322C68601B28A2C600A0073F /* TraversalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C685F1B28A2C600A0073F /* TraversalsTests.m */; };
 		323727401B28E0BF00F397CD /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237273F1B28E0BF00F397CD /* CustomButton.m */; };
-		323727431B28EEA400F397CD /* DetailSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727421B28EEA400F397CD /* DetailSubView.m */; };
 		323727461B28EF1E00F397CD /* CustomEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727451B28EF1E00F397CD /* CustomEdge.m */; };
 		323727491B28F60D00F397CD /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727481B28F60D00F397CD /* CustomView.m */; };
+		328E08D51B2A46F60071BECC /* DetailSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323727421B28EEA400F397CD /* DetailSubView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3225CEBF1B2A0A6E0070B760 /* CursorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursorButton.h; sourceTree = "<group>"; };
+		3225CEC01B2A0A6E0070B760 /* CursorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursorButton.m; sourceTree = "<group>"; };
 		322C683D1B28A2C600A0073F /* Traversals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traversals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C68411B28A2C600A0073F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322C68421B28A2C600A0073F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				322C684A1B28A2C600A0073F /* DetailViewController.h */,
 				322C684B1B28A2C600A0073F /* DetailViewController.m */,
 				3237273E1B28E0BF00F397CD /* CustomButton.h */,
+				3225CEBF1B2A0A6E0070B760 /* CursorButton.h */,
+				3225CEC01B2A0A6E0070B760 /* CursorButton.m */,
 				3237273F1B28E0BF00F397CD /* CustomButton.m */,
 				323727441B28EF1E00F397CD /* CustomEdge.h */,
 				323727451B28EF1E00F397CD /* CustomEdge.m */,
@@ -244,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				323727431B28EEA400F397CD /* DetailSubView.m in Sources */,
+				328E08D51B2A46F60071BECC /* DetailSubView.m in Sources */,
+				3225CEC11B2A0A6E0070B760 /* CursorButton.m in Sources */,
 				322C68461B28A2C600A0073F /* AppDelegate.m in Sources */,
 				323727401B28E0BF00F397CD /* CustomButton.m in Sources */,
 				322C68491B28A2C600A0073F /* MasterViewController.m in Sources */,

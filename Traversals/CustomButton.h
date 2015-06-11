@@ -11,6 +11,5 @@
 
 @interface CustomButton : UIButton
 //@property (nonatomic) CustomEdge* edge;
-
 - (void)highlightButton;
 @end

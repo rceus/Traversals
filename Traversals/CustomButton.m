@@ -9,33 +9,32 @@
 #import "CustomButton.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation CustomButton
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@implementation CustomButton{
+    CGContextRef classContext;
 }
-*/
 
 -(void) drawRect: (CGRect) rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    classContext = context;
     UIColor * yellowColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
     CGContextSetFillColorWithColor(context, yellowColor.CGColor);
     CGContextFillRect(context, self.bounds);
-    self.clipsToBounds = YES;
-    self.layer.cornerRadius = 24;
-    [self addTarget:self action:@selector(wasDragged:withEvent:)
-       forControlEvents:UIControlEventTouchDragInside];
+    //self.clipsToBounds = YES;
+    //self.layer.cornerRadius = 20;
+    //[self addTarget:self action:@selector(wasDragged:withEvent:)
+    //   forControlEvents:UIControlEventTouchDragInside];
 
 }
 
 - (void)highlightButton{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    UIColor * redColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
-    CGContextSetFillColorWithColor(context, redColor.CGColor);
+    NSLog(@"Reached");
+    //UIGraphicsBeginImageContext(self.frame.size);
+    UIColor * redColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    CGContextSetFillColorWithColor(classContext, redColor.CGColor);
+    CGContextFillRect(classContext, self.bounds);
+    //UIGraphicsEndImageContext();
+    
 }
 
 - (void)wasDragged:(UIButton *)button withEvent:(UIEvent *)event

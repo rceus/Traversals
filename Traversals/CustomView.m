@@ -19,19 +19,21 @@
 */
 - (void)drawRect:(CGRect)rect
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
-    CGContextSetLineWidth(context, 3.0);
-    CGContextMoveToPoint(context, 360/2, 100.0);
-    CGContextAddLineToPoint(context, 370/4, 160.0);
-    CGContextDrawPath(context, kCGPathStroke);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
+//    CGContextSetLineWidth(context, 3.0);
+//    CGContextMoveToPoint(context, 100/2, 100.0);
+//    CGContextAddLineToPoint(context, 370/4, 160.0);
+//    CGContextDrawPath(context, kCGPathStroke);
 }
 
 - (void)changeLinePositionOneX:(int)x1 positionOneY:(int)y1 positionTwoX:(int)x2 positionTwoY:(int)y2 {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
+    CGContextSetLineWidth(context, 3.0);
     CGContextMoveToPoint(context, x1, y1);
     CGContextAddLineToPoint(context, x2, y2);
+    CGContextDrawPath(context, kCGPathStroke);
 }
 
 

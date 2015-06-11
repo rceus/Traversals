@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailSubView : UIView
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
 
 @end
